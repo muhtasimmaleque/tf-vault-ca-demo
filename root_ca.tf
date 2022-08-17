@@ -59,7 +59,7 @@ resource local_file private_key {
 #
 resource tls_self_signed_cert ca_cert {
    private_key_pem = tls_private_key.ca_key.private_key_pem
-   key_algorithm = "RSA"
+#   key_algorithm = "RSA"
    subject {
      common_name = "${var.server_cert_domain} Root CA"
      organization = "TeKanAid Solutions Inc"
